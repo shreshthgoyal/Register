@@ -13,7 +13,7 @@ btn.addEventListener("click" , () =>{
 
     if(pass.value === pass2.value){
     const body = {username,password};
-    fetch("http://localhost:5000/adduser", {
+    fetch("https://obscure-ocean-75269.herokuapp.com/adduser", {
         method : "POST",
         headers :{
         "Content-Type" : "application/json",
