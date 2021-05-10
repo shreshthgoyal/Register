@@ -11,7 +11,7 @@ btn.addEventListener("click" , () =>{
     var username = user.value;
     var password = pass.value;
 
-    if(pass.value === pass2.value){
+    if(pass.value === pass2.value && username.length != 0 && password.length !=0){
     const body = {username,password};
     fetch("https://obscure-ocean-75269.herokuapp.com/adduser", {
         method : "POST",
@@ -26,10 +26,9 @@ btn.addEventListener("click" , () =>{
     }).then((result)=>{
        console.log(result);
     })}
-    else
-    {
-        alert("Both Passwords Don't Match Try Again");
-    }
+    else if(pass.value != pass2.value){
+    alert("Both Passwords Don't Match Try Again");}
+    
 });
 
 togglePassword.addEventListener('click', function (e) {
