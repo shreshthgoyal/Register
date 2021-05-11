@@ -28,7 +28,8 @@ btn.addEventListener("click" , () =>{
         return data.text();
     }).then((result)=>{
        console.log(result);
-    })}
+    })
+    alert("You have been registered");}
     else if(pass.value != pass2.value){
     alert("Both Passwords Don't Match Try Again");}
 
@@ -36,7 +37,7 @@ btn.addEventListener("click" , () =>{
     pass.value="";
     pass2.value="";
     
-       alert("You have been registered");
+       
     
 });
 
