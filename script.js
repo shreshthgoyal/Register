@@ -36,6 +36,8 @@ btn.addEventListener("click" , () =>{
     pass.value="";
     pass2.value="";
     
+       alert("You have been registered");
+    
 });
 
 
