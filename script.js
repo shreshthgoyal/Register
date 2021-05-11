@@ -10,6 +10,9 @@ const password2 = document.querySelector('#password2');
 btn.addEventListener("click" , () =>{
     var username = user.value;
     var password = pass.value;
+   
+    event.preventDefault();
+
 
     if(pass.value === pass2.value && username.length != 0 && password.length !=0){
     const body = {username,password};
@@ -28,8 +31,13 @@ btn.addEventListener("click" , () =>{
     })}
     else if(pass.value != pass2.value){
     alert("Both Passwords Don't Match Try Again");}
+
+    user.value = "";
+    pass.value="";
+    pass2.value="";
     
 });
+
 
 togglePassword.addEventListener('click', function (e) {
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
